@@ -19,9 +19,10 @@ Route::get('/', function () {
 });
 
 // Route::get('/tasks', 'TaskController@index');
-Route::get('/tasks', [TaskController::class, 'index']);
-Route::get('/tasks/create', [TaskController::class,'create']);
-Route::get('/tasks/store', [TaskController::class,'store']);
-Route::get('/tasks/edit',  [TaskController::class,'edit']);
-Route::get('/tasks/update',  [TaskController::class,'update']);
-Route::get('/tasks/updateStatus',  [TaskController::class,'updateStatus']);
+Route::get('/tasks', [TaskController::class, 'index'])->name('tasks.index');
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
+// Route::get('/tasks/store', [TaskController::class, 'store']);
+Route::post('/tasks/create', [TaskController::class, 'store'])->name('tasks.store');
+Route::get('/tasks/edit',  [TaskController::class, 'edit']);
+Route::get('/tasks/update',  [TaskController::class, 'update']);
+Route::get('/tasks/updateStatus',  [TaskController::class, 'updateStatus']);

@@ -1,3 +1,36 @@
+#TodoLaravel(taskMangementApp)
+
+How to setup TodoLaravel in your local Machine
+1. Clone the Repo
+2. Create Database with name todos
+3. Update .env file :
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=todos
+    DB_USERNAME=root
+    DB_PASSWORD=
+4. Run $php artisan migrate
+5. Run $php artisan serve in your terminal
+6. 
+
+taskMangementApp is my First laravel project.
+
+1. Create todos database 
+2. create a new Laravel project via Composer's create-project command:
+3. composer create-project laravel/laravel taskManagementApp
+4. Changed the DB_DATABASE=laravel to DB_DATABASE=todo in .env file.
+5. Once you have configured your SQL database, you may run your application's database migrations, which will create your application's database tables: $php artisan migrate
+6. added database field in database/migrations : 
+7. Schema::create('tasks', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->string('status');
+            $table->timestamps();
+        });
+8. Create routes in web.php
+9. Create layouts and tasks to use blade template.
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

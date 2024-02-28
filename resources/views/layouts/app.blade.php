@@ -19,8 +19,8 @@
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="{{route('tasks.index')}}" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="{{route('tasks.create')}}" class="nav-link">Create Task</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
@@ -32,9 +32,15 @@
         @yield('content')
     </div>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        @yield('footer')
-    </footer>
+
+
+    <div class="container sticky-sm-bottom">
+        <footer class=" py-3 my-4">
+
+            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+        </footer>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
